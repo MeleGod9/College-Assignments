@@ -1,12 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Book Information Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        form {
+            text-align: center;
+        }
+        label, input, select {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-    <frameset cols="25%,75%">
-        <frame src="books_list.html" name="booksList">
-        <frame src="book_info.html" name="bookInfo">
-    </frameset>
+    <div>
+        <h1>User Information Form</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" name="mobile"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="city">City:</label>
+            <select id="city" name="city">
+                <option value="jaipur">Jaipur</option>
+                <option value="delhi">Delhi</option>
+                <option value="mumbai">Mumbai</option>
+                <!-- Add more cities as needed -->
+            </select><br><br>
+
+            <label for="state">State:</label>
+            <select id="state" name="state">
+                <option value="rajasthan">Rajasthan</option>
+                <option value="delhi">Delhi</option>
+                <option value="maharashtra">Maharashtra</option>
+                <!-- Add more states as needed -->
+            </select><br><br>
+
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="india">India</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+                <!-- Add more countries as needed -->
+            </select><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 </body>
 </html>

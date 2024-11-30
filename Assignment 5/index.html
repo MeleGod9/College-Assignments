@@ -12,12 +12,54 @@
             height: 100vh;
             margin: 0;
             text-align: center;
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
         }
         form {
-            text-align: center;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        label, input, select {
+        label {
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
             margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="radio"] {
+            width: auto;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .radio-group label {
+            margin-left: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        h1 {
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -26,19 +68,21 @@
         <h1>User Information Form</h1>
         <form>
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name"><br><br>
+            <input type="text" id="name" name="name">
 
             <label for="gender">Gender:</label>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label><br><br>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
 
             <label for="mobile">Mobile Number:</label>
-            <input type="text" id="mobile" name="mobile"><br><br>
+            <input type="text" id="mobile" name="mobile">
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email"><br><br>
+            <input type="email" id="email" name="email">
 
             <label for="city">City:</label>
             <select id="city" name="city">
@@ -46,7 +90,7 @@
                 <option value="delhi">Delhi</option>
                 <option value="mumbai">Mumbai</option>
                 <!-- Add more cities as needed -->
-            </select><br><br>
+            </select>
 
             <label for="state">State:</label>
             <select id="state" name="state">
@@ -54,7 +98,7 @@
                 <option value="delhi">Delhi</option>
                 <option value="maharashtra">Maharashtra</option>
                 <!-- Add more states as needed -->
-            </select><br><br>
+            </select>
 
             <label for="country">Country:</label>
             <select id="country" name="country">
@@ -62,7 +106,7 @@
                 <option value="usa">USA</option>
                 <option value="uk">UK</option>
                 <!-- Add more countries as needed -->
-            </select><br><br>
+            </select>
 
             <input type="submit" value="Submit">
         </form>

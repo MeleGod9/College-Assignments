@@ -1,0 +1,27 @@
+body {
+    background-image: url("/Users/vivekrao/Documents/College Assignments/Assignment 7/calculator-pencils-background_188544-6127.avif");
+    font: 1em sans-serif size ;
+    color:black;
+    font-size: large;
+    justify-items: center;
+    align-content: center;
+    padding: 350px;
+    
+}
+h1 {
+    background-color: whitesmoke;
+    padding: auto;
+}
+.container { 
+    background: whitesmoke; 
+    padding: 40px; 
+    height: 350px;
+    border-radius: 5px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+}
+.box { 
+    padding: 15px; 
+    border: 1px solid #ccc; /* Optional: Add a border to the inner box */ border-radius: 5px; 
+    margin-top: 20px; /* Space from the heading */
+}

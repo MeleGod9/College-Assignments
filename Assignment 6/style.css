@@ -2,6 +2,7 @@ body {
     background-color: #f4f4f9;
     font-family: Arial, sans-serif;
     margin: 20px;
+    background-image:url("sample-image.jpg") ;
 }
 
 h1 {

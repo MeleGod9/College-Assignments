@@ -1,0 +1,11 @@
+body {
+    background-color: azure;
+    justify-items: center;
+    padding: 350px;
+}
+form {
+    background-color: gray;
+    font-style: italic;
+    color: black;
+    padding: 5px;
+}

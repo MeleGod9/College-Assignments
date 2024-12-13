@@ -3,37 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Login - Smart Campus Online Store</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Login</h1>
+        <h1>Smart Campus Online Store</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Signup</a>
+            <a href="products.html">Products</a>
         </nav>
     </header>
-
     <main>
-        <form>
+        <h2>Login</h2>
+        <form id="loginForm">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username"><br><br>
-
+            <input type="text" id="username" required>
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password"><br><br>
-
-            <input type="submit" value="Login">
+            <input type="password" id="password" required>
+            <button type="submit">Login</button>
         </form>
-        <a href="signup.html">Don't have an account? Sign up here.</a>
     </main>
-
-    <footer>
-        <p>&copy; 2024 Electronics Store India. All rights reserved.</p>
-    </footer>
 </body>
 </html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product>
+        <name>Product 1</name>
+        <price>7500.00</price>
+        <description>Description of product 1.</description>
+        <image>images/product1.jpg</image>
+    </product>
+    <product>
+        <name>Product 2</name>
+        <price>3500.00</price>
+        <description>Description of product 2.</description>
+        <image>images/product2.jpg</image>
+    </product>
+    <product>
+        <name>Product 3</name>
+        <price>22500.00</price>
+        <description>Description of product 3.</description>
+        <image>images/product3.jpg</image>
+    </product>
+</products>

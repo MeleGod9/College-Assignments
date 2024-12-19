@@ -4,46 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capture User Information</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <link rel="stylesheet" href="styles.css">
-    <h1>Capture User Information</h1>
-    <form id="userForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
+    <header>
+        <h1>Capture User Information</h1>
+    </header>
+    <main>
+        <form id="userInfoForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-        <label for="gender">Gender:</label>
-        <input type="radio" id="male" name="gender" value="Male">
-        <label for="male">Male</label>
-        <input type="radio" id="female" name="gender" value="Female">
-        <label for="female">Female</label><br><br>
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
 
-        <label for="mobile">Mobile Number:</label>
-        <input type="text" id="mobile" name="mobile"><br><br>
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10}">
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
+            <label for="email">Mail ID:</label>
+            <input type="email" id="email" name="email" required>
 
-        <button type="button" onclick="displayInfo()">Submit</button>
-    </form>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
 
-    <h2>User Information</h2>
-    <p id="userInfo"></p>
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
 
-    <script>
-        function displayInfo() {
-            var name = document.getElementById('name').value;
-            var gender = document.querySelector('input[name="gender"]:checked').value;
-            var mobile = document.getElementById('mobile').value;
-            var email = document.getElementById('email').value;
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required>
 
-            var userInfo = 'Name: ' + name + '<br>' +
-                           'Gender: ' + gender + '<br>' +
-                           'Mobile: ' + mobile + '<br>' +
-                           'Email: ' + email;
-
-            document.getElementById('userInfo').innerHTML = userInfo;
-        }
-    </script>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <script src="scripts.js"></script>
 </body>
 </html>

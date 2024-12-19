@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display User Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Display User Information</h1>
+    </header>
+    <main>
+        <div id="userInfoDisplay">
+            <!-- User information will be dynamically added here by JavaScript -->
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+            if (userInfo) {
+                const userInfoDisplay = document.getElementById('userInfoDisplay');
+                userInfoDisplay.innerHTML = `
+                    <p>Name: ${userInfo.name}</p>
+                    <p>Gender: ${userInfo.gender}</p>
+                    <p>Mobile Number: ${userInfo.mobile}</p>
+                    <p>Email: ${userInfo.email}</p>
+                    <p>City: ${userInfo.city}</p>
+                    <p>State: ${userInfo.state}</p>
+                    <p>Country: ${userInfo.country}</p>
+                `;
+            } else {
+                document.getElementById('userInfoDisplay').innerHTML = '<p>No user information found.</p>';
+            }
+        });
+    </script>
+</body>
+</html>

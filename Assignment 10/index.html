@@ -90,24 +90,8 @@
             document.getElementById('result').innerHTML = resultTable;
         }
 
-        function updateResult() {
-            var scienceMarks = parseFloat(document.getElementById('scienceMarks').value) || 0;
-            var mathMarks = parseFloat(document.getElementById('mathMarks').value) || 0;
-            var socialScienceMarks = parseFloat(document.getElementById('socialScienceMarks').value) || 0;
-
-            var totalMarks = scienceMarks + mathMarks + socialScienceMarks;
-            var averageMarks = totalMarks / 3;
-            var pass = scienceMarks >= 33 && mathMarks >= 33 && socialScienceMarks >= 33;
-
-            var resultTable = `<tr><td>Science Marks</td><td>${scienceMarks}</td></tr>
-                               <tr><td>Mathematics Marks</td><td>${mathMarks}</td></tr>
-                               <tr><td>Social Science Marks</td><td>${socialScienceMarks}</td></tr>
-                               <tr><td>Total Marks</td><td>${totalMarks}</td></tr>
-                               <tr><td>Average Marks</td><td>${averageMarks.toFixed(2)}</td></tr>
-                               <tr><td>Result</td><td>${pass ? 'Pass' : 'Fail'}</td></tr>`;
-
-            document.getElementById('result').innerHTML = resultTable;
-        }
+       
+        
     </script>
 </body>
 </html>

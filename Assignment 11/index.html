@@ -4,17 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Information</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Employee Information</h1>
-    </header>
-    <main>
-        <div id="employeeTable">
-            <!-- Table data will be dynamically added here by JavaScript -->
-        </div>
-    </main>
-    <script src="scripts.js"></script>
+    <h1>Employee Information</h1>
+    <table id="employeeTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Department</th>
+                <th>Phone</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        // Function to fetch XML and parse it
+        async function fetchXML(filename) {
+            try {
+                const response = await fetch(filename);
+                const text = await response.text();
+                const parser = new DOMParser();
+                return parser.parseFromString(text, "application/xml");
+            } catch (error) {
+                console.error("Error while fetching XML file:", error);
+                return null;
+            }
+        }
+
+        // Function to display data
+        function displayData(xml) {
+            var tableBody = document.getElementById("employeeTable").getElementsByTagName("tbody")[0];
+            var employees = xml.getElementsByTagName("employee");
+
+            for (var i = 0; i < employees.length; i++) {
+                var row = tableBody.insertRow(i);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var cell5 = row.insertCell(4);
+
+                cell1.innerHTML = employees[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+                cell2.innerHTML = employees[i].getElementsByTagName("age")[0].childNodes[0].nodeValue;
+                cell3.innerHTML = employees[i].getElementsByTagName("department")[0].childNodes[0].nodeValue;
+                cell4.innerHTML = employees[i].getElementsByTagName("phone")[0].childNodes[0].nodeValue;
+                cell5.innerHTML = employees[i].getElementsByTagName("email")[0].childNodes[0].nodeValue;
+            }
+        }
+
+        // Load and display XML data
+        fetchXML("employees.xml").then(xml => {
+            if (xml) {
+                displayData(xml);
+            } else {
+                console.error("Failed to load the XML file.");
+            }
+        });
+    </script>
 </body>
 </html>

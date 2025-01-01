@@ -1,24 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <employees>
     <employee>
-        <id>1</id>
         <name>John Doe</name>
         <age>30</age>
-        <department>Engineering</department>
-        <salary>75000</salary>
+        <department>Sales</department>
+        <phone>123-456-7890</phone>
+        <email>john.doe@example.com</email>
     </employee>
     <employee>
-        <id>2</id>
         <name>Jane Smith</name>
         <age>25</age>
         <department>Marketing</department>
-        <salary>60000</salary>
+        <phone>987-654-3210</phone>
+        <email>jane.smith@example.com</email>
     </employee>
     <employee>
-        <id>3</id>
-        <name>James Brown</name>
-        <age>45</age>
+        <name>Mike Brown</name>
+        <age>40</age>
         <department>HR</department>
-        <salary>80000</salary>
+        <phone>555-666-7777</phone>
+        <email>mike.brown@example.com</email>
     </employee>
 </employees>
